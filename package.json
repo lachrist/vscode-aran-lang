@@ -1,0 +1,25 @@
+{
+  "name": "aran-lang",
+  "displayName": "AranLang",
+  "description": "Syntax highlighting for AranLang",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "aran",
+      "aliases": ["Aran", "aran"],
+      "extensions": [".aran"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "aran",
+      "scopeName": "source.aran",
+      "path": "./syntaxes/aran.tmLanguage.json"
+    }]
+  }
+}

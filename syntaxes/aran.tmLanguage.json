@@ -1,0 +1,105 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Aran",
+	"patterns": [
+		{ "include": "#comment" },
+		{ "include": "#constant" },
+		{ "include": "#keyword" },
+		{ "include": "#variable" },
+		{ "include": "#specifier" }
+	],
+	"repository": {
+		"comment": {
+			"patterns": [{
+				"name": "comment.line.double-slash.aran",
+				"match": "//.*"
+			}, {
+				"name": "comment.block.aran",
+				"begin": "/\\*",
+				"end": "\\*/"
+			}]
+		},
+		"constant": {
+			"patterns": [{
+				"name": "constant.language.boolean.aran",
+				"match": "(?!\\.)\\b(true|false)(?!\\.)\\b"
+			}, {
+				"name": "constant.language.null.aran",
+				"match": "(?!\\.)\\bnull(?!\\.)\\b"
+			}, {
+				"name": "constant.language.intrinsic.aran",
+				"begin": "%",
+				"end": "%"
+			}, {
+				"name": "constant.numeric.decimal.aran",
+				"match": "(?!\\.)\\b(\\d+(\\.\\d*)?|\\.\\d+)([eE][+-]?\\d+)?(?!\\.)\\b"
+			}, {
+				"name": "constant.numeric.bigint.aran",
+				"match": "(?!\\.)\\b\\d+n(?!\\.)\\b"
+			}, {
+				"name": "string.quoted.double.aran",
+				"begin": "\"",
+				"end": "\"",
+				"patterns": [
+					{
+						"name": "constant.character.escape.aran",
+						"match": "\\\\."
+					}
+				]
+			}]
+	  },
+		"keyword": {
+			"patterns": [{
+				"name": "keyword.control.aran",
+				"match": "(?!\\.)\\b(return|break|debugger|if|else|while|try|catch|finally)(?!\\.)\\b"
+			}, {
+				"name": "keyword.namespace.aran",
+				"match": "(?!\\.)\\b(import|export|from|as)(?!\\.)\\b"
+			}, {
+				"name": "keyword.declaration.aran",
+				"match": "(?!\\.)\\b(let|function|method)(?!\\.)\\b"
+			}, {
+				"name": "keyword.other.aran",
+				"match": "(?!\\.)\\b(async|await|yield)(?!\\.)\\b"
+			}, {
+				"name": "keyword.operator.aran",
+				"match": "(?!\\.)\\b(eval|new)(?!\\.)\\b"
+			}]
+		},
+		"specifier": {
+			"patterns": [{
+				"name": "variable.function.aran",
+				"begin": "'",
+				"end": "'",
+				"patterns": [
+					{
+						"name": "constant.character.escape",
+						"match": "\\\\."
+					}
+				]
+			}]
+		},
+		"variable": {
+			"patterns": [{
+				"name": "variable.language.closure.aran",
+				"match": "(?!\\.)\\b(this|new\\.target|function\\.arguments|function\\.callee)(?!\\.)\\b"
+			}, {
+				"name": "variable.language.error.aran",
+			  "match": "(?!\\.)\\b(catch\\.error)(?!\\.)\\b"
+		  }, {
+				"name": "variable.language.super.aran",
+				"match": "(?!\\.)\\b(super\\.get|super\\.set|super\\.call)(?!\\.)\\b"
+			}, {
+				"name": "variable.language.private.aran",
+				"match": "(?!\\.)\\b(private\\.check|private\\.set|private\\.get|private\\.has)(?!\\.)\\b"
+			}, {
+				"name": "variable.language.scope.aran",
+				"match": "(?!\\.)\\b(scope\\.writeSloppy|scope\\.writeStrict|scope\\.discard|scope\\.typeof|scope\\.read)(?!\\.)\\b"
+			}, {
+				"name": "variable.name",
+				"match": "(?!\\.)\\b\\p{ID_Start}(\\p{ID_Continue}|\\.)*(?!\\.)\\b"
+			}]
+		}
+	},
+	"scopeName": "source.aran"
+}

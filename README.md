@@ -1,2 +1,3 @@
-# vscode-aran-lang
-VSCode extensions for syntax highlight of AranLang
+# AranLang VSCode Extension
+
+Syntax highlighting for the [AranLang](https://github.com/lachrist/aran) programming language.
