@@ -65,7 +65,7 @@
 		},
 		"specifier": {
 			"patterns": [{
-				"name": "variable.function.aran",
+				"name": "string.quoted.single.aran",
 				"begin": "'",
 				"end": "'",
 				"patterns": [

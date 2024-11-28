@@ -3,7 +3,7 @@
   "displayName": "AranLang",
   "description": "Syntax highlighting for AranLang",
   "repository": "https://github.com/lachrist/vscode-aran-lang",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "lachrist",
   "engines": {
     "vscode": "^1.95.0"
