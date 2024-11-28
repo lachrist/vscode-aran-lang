@@ -57,13 +57,10 @@
 				"match": "(?!\\.)\\b(import|export|from|as)(?!\\.)\\b"
 			}, {
 				"name": "keyword.declaration.aran",
-				"match": "(?!\\.)\\b(let|function|method)(?!\\.)\\b"
+				"match": "(?!\\.)\\b(let|arrow|function|method|generator)(?!\\.)\\b"
 			}, {
 				"name": "keyword.other.aran",
-				"match": "(?!\\.)\\b(async|await|yield)(?!\\.)\\b"
-			}, {
-				"name": "keyword.operator.aran",
-				"match": "(?!\\.)\\b(eval|new)(?!\\.)\\b"
+				"match": "(?!\\.)\\b(async|await|yield\\*?|eval|new|that)(?!\\.)\\b"
 			}]
 		},
 		"specifier": {
