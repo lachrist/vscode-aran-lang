@@ -2,7 +2,9 @@
   "name": "aran-lang",
   "displayName": "AranLang",
   "description": "Syntax highlighting for AranLang",
+  "repository": "https://github.com/lachrist/vscode-aran-lang",
   "version": "0.0.1",
+  "publisher": "lachrist",
   "engines": {
     "vscode": "^1.95.0"
   },
@@ -10,16 +12,28 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "aran",
-      "aliases": ["Aran", "aran"],
-      "extensions": [".aran"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "aran",
-      "scopeName": "source.aran",
-      "path": "./syntaxes/aran.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "aran",
+        "aliases": [
+          "Aran",
+          "aran"
+        ],
+        "extensions": [
+          ".aran"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "aran",
+        "scopeName": "source.aran",
+        "path": "./syntaxes/aran.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.2.1"
   }
 }
