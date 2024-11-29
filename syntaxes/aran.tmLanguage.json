@@ -94,7 +94,7 @@
 				"match": "(?!\\.)\\b(scope\\.writeSloppy|scope\\.writeStrict|scope\\.discard|scope\\.typeof|scope\\.read)(?!\\.)\\b"
 			}, {
 				"name": "variable.name",
-				"match": "(?!\\.)\\b\\p{ID_Start}(\\p{ID_Continue}|\\.)*(?!\\.)\\b"
+				"match": "(\\p{ID_Start}|_|\\.)(\\p{ID_Continue}|\\.)*"
 			}]
 		}
 	},
